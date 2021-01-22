@@ -1,0 +1,83 @@
+Arrow Func
+------------
+
+const printMyName = number => number * 2;
+
+console.log(printMyName(5));
+
+one input para -> No ()
+One Line -> No {}, No return keyword
+
+
+----------------------------------------------------
+import/export
+
+import person - pojo object
+import {data} - const variable
+import * - All const variable and methods
+
+---------------------------------------------------
+
+class - properties, constructor, methods
+inheritance - extends, super() in child constructor
+
+---------------------------------------------------------
+
+spread operator (copy reference data) & rest operator (merge to receive args in an array)
+
+const arr = [1, 2, 3];
+console.log(arr);
+const arr1 = [...arr, 4, 5];
+console.log(arr1);
+
+const person = {
+  name: 'sam'
+};
+const newObj = {
+  ...person,
+  age: 27
+};
+console.log(newObj)
+
+------------------------------------------------------------
+
+Array Destructuring
+
+const arr = [1, 2, 3];
+[n1, n2] = arr;
+console.log(n1, n2);
+
+const arr = [1, 2, 3];
+[n1, , n2] = arr;
+console.log(n1, n2);
+
+Object Destructuring
+
+{data} = {
+  name: 'Sam',
+  age: 27
+};
+
+console.log(name);
+console.log(age);
+----------------------------------------------------------------
+
+Primitive Type
+
+let number = 1
+let num = number;
+console.log(num);
+number = 2;
+console.log(num);
+
+Only once it copies
+
+But in reference type, it takes the pointer, so any change can affect the other object
+
+----------------------------------------------------------------------------------------------
+
+const numbers = [1, 2, 3];
+const doubleArr = numbers.map(num => num*2);
+
+console.log(numbers);
+console.log(doubleArr);

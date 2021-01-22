@@ -1,0 +1,45 @@
+// return (
+  //   <div className="App">
+  //     <h1>Hello...</h1>
+  //   </div>
+  // );
+
+  return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'It is working...'));
+  
+Internally The above JSX code will convert to below JS equivalent.
+ 1st - HTML Element
+ 2nd - An JS object which contains the configuration / properties
+ 3rd - Child Element inside the root element
+
+** Becaue of this, we use JSX and coverted by Build Tool
+
+JSX Restrictions:- class -> className
+                   should have one root element
+                   each elementmaintain by React Library
+
+
+----------------------------------------------------------------------------------------
+
+In React, component is just a function that returns some JSX.
+
+----------------------------------------------------------------------------------------
+
+'props' to pass the properties to a component as HTML attributes.				   
+'props' name is optional, but recommended to use.
+
+In function based, only "props" & class based, "this.props"
+
+props.children
+-------------------------------------------------------------------------------
+
+'state' is used for only class based component properties defined.
+We can use state with other name, but recommended as 'state'
+
+---------------------------------------------------------------------------------
+
+We can use "useState" hook for state in function based component.
+But in this case we need to pass all data, bz it is overwritten always.
+
+-------------------------------------------------------------------------------------------
+
+We can pass method reference as props to the other component.

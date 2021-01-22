@@ -1,0 +1,73 @@
+<!--<div class="person">
+  <h1>Sameer</h1>
+  <p>Age: 27</p>
+</div> -->
+<diV id="p1"></div>
+<diV class="person">
+  <h1>Mama</h1>
+  <p>Age: 27</p>
+</div>
+
+.person {
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  width: 200px;
+  padding: 20px;
+  display: inline-block;
+  margin: 10px;
+}
+
+
+function Person() {
+  return(
+    <div className="person">
+      <h1>Sameer</h1>
+      <p>Age: 28</p>
+    </div>
+  );
+}
+
+ReactDOM.render(<Person />,
+document.querySelector('#p1'));
+ReactDOM.render(<Person />,
+document.querySelector('#p2')); -- Reuse of component
+
+------------------------------------------------------------------------
+DYNAMIC VALUE
+
+function Person(props) {
+  return(
+    <div className="person">
+      <h1>{props.name}</h1>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+}
+
+ReactDOM.render(<Person name="Sameer" age="27" />,
+document.querySelector('#p1'));
+ReactDOM.render(<Person name="Mama" age="28" />,
+document.querySelector('#p2'));
+
+--------------------------------------------------------------------------
+
+Passing elements through a variable
+
+function Person(props) {
+  return(
+    <div className="person">
+      <h1>{props.name}</h1>
+      <p>Age: {props.age}</p>
+    </div>
+  );
+}
+
+var app =(
+  <div>
+    <Person name="Sameer" age="27" />
+    <Person name="Mama" age="28" />
+  </div>
+);
+
+ReactDOM.render(app,
+document.querySelector('#app'));
